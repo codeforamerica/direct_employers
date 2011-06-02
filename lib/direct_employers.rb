@@ -1,3 +1,5 @@
+require 'direct_employers/client'
+
 module DirectEmployers
   def self.new
     DirectEmployers::Client.new
