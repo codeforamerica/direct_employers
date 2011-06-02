@@ -4,7 +4,6 @@ require 'simplecov'
 SimpleCov.start
 require 'direct_employers'
 require 'rspec'
-
 require 'webmock/rspec'
 
 def a_delete(query)

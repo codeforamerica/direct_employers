@@ -5,6 +5,10 @@ module DirectEmployers
   class Client
     include DirectEmployers::Connection
     include DirectEmployers::Request
+    
+    def search(options={})
+      get("", options)
+    end
 
   end
 end
