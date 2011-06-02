@@ -6,14 +6,17 @@ describe DirectEmployers::Client do
   end
   
   describe "#search" do
+    context "with no query parameters" do
       before do
-        stub_get("").
+        stub_get("api.asp?key=abc123").
           to_return(:status => 200, :body => fixture("search_to_broad.xml"))
       end
 
-      it "should search jobs" do
-        search = @client.search
-        a_get("").should have_been_made
+      it "should return search to broad" do
+        search = @client.search(:key => "abc123")
+        a_get("api.asp?key=abc123").should have_been_made
+        search.api.error.should == "Search Too Broad"
       end
     end
+  end
 end
