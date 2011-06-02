@@ -5,7 +5,7 @@ module DirectEmployers
     private
 
     def connection
-      Faraday.new(:url => 'http://www.jobcentral.com/api.asp') do |connection|
+      Faraday.new(:url => 'http://www.jobcentral.com') do |connection|
         connection.use Faraday::Request::UrlEncoded
         connection.use Faraday::Response::RaiseError
         connection.use Faraday::Response::Rashify
