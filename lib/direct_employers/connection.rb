@@ -10,6 +10,7 @@ module DirectEmployers
         connection.use Faraday::Response::RaiseError
         connection.use Faraday::Response::Rashify
         connection.use Faraday::Response::ParseJson
+        connection.use Faraday::Response::ParseXml
         connection.adapter(Faraday.default_adapter)
       end
     end
