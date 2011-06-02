@@ -7,7 +7,7 @@ module DirectEmployers
     include DirectEmployers::Request
     
     def search(options={})
-      get("", options)
+      get("api.asp", options)
     end
 
   end
