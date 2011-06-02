@@ -6,36 +6,36 @@ require 'direct_employers'
 require 'rspec'
 require 'webmock/rspec'
 
-def a_delete(query)
-  a_request(:delete, 'http://www.jobcentral.com/api.asp' + query)
+def a_delete(path)
+  a_request(:delete, 'http://www.jobcentral.com/' + path)
 end
 
-def a_get(query)
-  a_request(:get, 'http://www.jobcentral.com/api.asp' + query)
+def a_get(path)
+  a_request(:get, 'http://www.jobcentral.com/' + path)
 end
 
-def a_post(query)
-  a_request(:post, 'http://www.jobcentral.com/api.asp' + query)
+def a_post(path)
+  a_request(:post, 'http://www.jobcentral.com/' + path)
 end
 
-def a_put(query)
-  a_request(:put, 'http://www.jobcentral.com/api.asp' + query)
+def a_put(path)
+  a_request(:put, 'http://www.jobcentral.com/' + path)
 end
 
-def stub_delete(query)
-  stub_request(:delete, 'http://www.jobcentral.com/api.asp' + query)
+def stub_delete(path)
+  stub_request(:delete, 'http://www.jobcentral.com/' + path)
 end
 
-def stub_get(query)
-  stub_request(:get, 'http://www.jobcentral.com/api.asp' + query)
+def stub_get(path)
+  stub_request(:get, 'http://www.jobcentral.com/' + path)
 end
 
-def stub_post(query)
-  stub_request(:post, 'http://www.jobcentral.com/api.asp' + query)
+def stub_post(path)
+  stub_request(:post, 'http://www.jobcentral.com/' + path)
 end
 
-def stub_put(query)
-  stub_request(:put, 'http://www.jobcentral.com/api.asp' + query)
+def stub_put(path)
+  stub_request(:put, 'http://www.jobcentral.com/' + path)
 end
 
 def fixture_path
