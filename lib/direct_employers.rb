@@ -4,7 +4,7 @@ module DirectEmployers
   def self.new
     DirectEmployers::Client.new
   end
-  
+
   # Delegate to DirectEmployers::Client
   def self.method_missing(method, *args, &block)
     return super unless new.respond_to?(method)

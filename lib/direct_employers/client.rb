@@ -5,7 +5,7 @@ module DirectEmployers
   class Client
     include DirectEmployers::Connection
     include DirectEmployers::Request
-    
+
     def search(options={})
       get("api.asp", options)
     end
