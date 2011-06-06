@@ -3,8 +3,13 @@ require 'direct_employers/request'
 
 module DirectEmployers
   class Client
+    attr_accessor :key
     include DirectEmployers::Connection
     include DirectEmployers::Request
+
+    def initialize(options={})
+      @key = options[:key]
+    end
 
     # Get a list of all jobs that match the query string parameters
     #

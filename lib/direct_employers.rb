@@ -1,8 +1,8 @@
 require 'direct_employers/client'
 
 module DirectEmployers
-  def self.new
-    DirectEmployers::Client.new
+  def self.new(options={})
+    DirectEmployers::Client.new(options)
   end
 
   # Delegate to DirectEmployers::Client

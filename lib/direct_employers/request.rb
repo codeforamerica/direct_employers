@@ -8,7 +8,7 @@ module DirectEmployers
 
     def request(method, path, options)
       response = connection.send(method) do |request|
-        request.url(path, options)
+        request.url(path, options.merge(:key => @key))
       end
       response.body
     end
