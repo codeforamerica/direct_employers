@@ -1,4 +1,5 @@
 require 'faraday_middleware'
+require 'faraday/response/parse_error'
 
 module DirectEmployers
   module Connection
@@ -10,6 +11,7 @@ module DirectEmployers
         connection.use Faraday::Response::RaiseError
         connection.use Faraday::Response::Rashify
         connection.use Faraday::Response::ParseXml
+        connection.use Faraday::Response::ParseError
         connection.adapter(Faraday.default_adapter)
       end
     end
