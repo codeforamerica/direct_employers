@@ -29,6 +29,7 @@ describe DirectEmployers::Client do
         search = @client.search(:key => "abc123", :moc => "11b")
         a_get("api.asp?key=abc123&moc=11b").should have_been_made
         search.api.query.should == "First-Line Supervisors/Managers of Weapons Specialists/Crew Members, Infantry"
+        search.api.jobs.job.first.company == "Tennessee Employer"
       end
     end
   end
