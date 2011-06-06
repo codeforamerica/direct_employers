@@ -4,11 +4,11 @@ require File.expand_path('../lib/direct_employers/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.name        = 'direct_employers'
   gem.version     = DirectEmployers::VERSION
-  gem.author      = "Code for America"
-  gem.email       = 'info@codeforamerica.org'
-  gem.homepage    = ''
-  gem.summary     = %q{TODO: Write a gem summary}
-  gem.description = %q{TODO: Write a gem description}
+  gem.authors     = ["Erik Michaels-Ober", "Ryan Resella"]
+  gem.email       = ['erik@codeforamerica.org', 'ryan@codeforamerica.org']
+  gem.homepage    = 'https://github.com/codeforamerica.org/direct_employers'
+  gem.summary     = gem.description
+  gem.description = %q{Ruby Wrapper for the Direct Employers API}
 
   gem.files         = `git ls-files`.split("\n")
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
