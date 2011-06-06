@@ -21,6 +21,7 @@ Usage Examples
     @client = DirectEmployers.new
     @client.search({moc: => ""11b}) # Return an array for all matching job listings for MOC of 11b
     @client.search.query # => "First-Line Supervisors/Managers of Weapons Specialists/Crew Members, Infantry"
+	@client.search.api.jobs.job.first.company # => "Tennessee Employer"
 
 
 Contributing
