@@ -30,4 +30,16 @@ describe Faraday::Response do
       end
     end
   end
+  context "with no items found in search query" do
+    before do
+      stub_get("api.asp").
+        to_return(:status => 200, :body => '')
+    end
+
+    it "should raise an exception" do
+      lambda do
+        @client.search
+      end.should raise_error
+    end
+  end
 end
