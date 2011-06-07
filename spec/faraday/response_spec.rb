@@ -2,7 +2,7 @@ require 'helper'
 
 describe Faraday::Response do
   before do
-    @client = DirectEmployers::Client.new
+    @client = DirectEmployers::new(:key => "abc123")
   end
 
   {

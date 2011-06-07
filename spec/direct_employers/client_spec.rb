@@ -2,7 +2,7 @@ require 'helper'
 
 describe DirectEmployers::Client do
   before do
-    @client = DirectEmployers::Client.new
+    @client = DirectEmployers.new(:key => "abc123")
   end
 
   describe "#search" do
@@ -13,7 +13,7 @@ describe DirectEmployers::Client do
       end
 
       it "should return search to broad" do
-        search = @client.search(:key => "abc123")
+        search = @client.search
         a_get("api.asp?key=abc123").should have_been_made
         search.api.error.should == "Search Too Broad"
       end
@@ -26,7 +26,7 @@ describe DirectEmployers::Client do
       end
 
       it "should return a list of jobs with moc code 11b" do
-        search = @client.search(:key => "abc123", :moc => "11b")
+        search = @client.search(:moc => "11b")
         a_get("api.asp?key=abc123&moc=11b").should have_been_made
         search.api.query.should == "First-Line Supervisors/Managers of Weapons Specialists/Crew Members, Infantry"
         search.api.jobs.job.first.company == "Tennessee Employer"
