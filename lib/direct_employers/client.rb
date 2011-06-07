@@ -7,6 +7,11 @@ module DirectEmployers
     include DirectEmployers::Connection
     include DirectEmployers::Request
 
+    # Set your development key on New
+    #
+    # @param options [Hash] A customizable set of options. 
+    # @example
+    #   DirectEmployers.New({:key => "abc123"})
     def initialize(options={})
       @key = options[:key]
     end
