@@ -9,7 +9,7 @@ module DirectEmployers
       Faraday.new(:url => 'http://www.jobcentral.com') do |connection|
         connection.use Faraday::Request::UrlEncoded
         connection.use Faraday::Response::RaiseError
-        connection.use Faraday::Response::Rashify
+        connection.use Faraday::Response::Mashify
         connection.use Faraday::Response::ParseXml
         connection.use Faraday::Response::ParseError
         connection.adapter(Faraday.default_adapter)
