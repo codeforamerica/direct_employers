@@ -7,8 +7,8 @@ Gem::Specification.new do |gem|
   gem.authors     = ["Erik Michaels-Ober", "Ryan Resella"]
   gem.email       = ['erik@codeforamerica.org', 'ryan@codeforamerica.org']
   gem.homepage    = 'https://github.com/codeforamerica.org/direct_employers'
-  gem.summary     = gem.description
   gem.description = %q{Ruby Wrapper for the Direct Employers API}
+  gem.summary     = gem.description
 
   gem.files         = `git ls-files`.split("\n")
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
