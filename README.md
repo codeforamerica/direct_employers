@@ -8,7 +8,7 @@ Ruby wrapper for the Direct Employers API
 [http://rdoc.info/gems/direct_employers](http://rdoc.info/gems/direct_employers)
 
 ## <a name="ci">Continuous Integration</a>
-[![Build Status](https://secure.travis-ci.org/codeforamerica/direct_employers.png)](http://travis-ci.org/codeforamerica/direct_employers)
+[![Build Status](https://travis-ci.org/codeforamerica/direct_employers.png)](http://travis-ci.org/codeforamerica/direct_employers)
 
 ## <a name="examples">Usage Examples</a>
     require 'direct_employers'
