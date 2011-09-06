@@ -13,7 +13,7 @@ Ruby wrapper for the Direct Employers API
 ## <a name="examples">Usage Examples</a>
     require 'direct_employers'
 
-    @client = DirectEmployers.new({key: => "abc123"}) #Add your development key
+    @client = DirectEmployers.new({:key => "abc123"}) #Add your development key
     @client.search({:moc => "11b"}) # Return an array for all matching job listings for MOC of 11b
     @client.search.query # => "First-Line Supervisors/Managers of Weapons Specialists/Crew Members, Infantry"
 	  @client.search.api.jobs.job.first.company # => "Tennessee Employer"
